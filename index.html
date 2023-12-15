@@ -53,7 +53,7 @@
         const cube = document.getElementById('rotatingCube');
         if (window.DeviceOrientationEvent) {
             window.addEventListener("deviceorientation", function () {
-                cube.style.transform = `rotateX(${event.alpha}deg) rotateY(0deg) rotateZ(${event.gamma}deg)`;
+                cube.style.transform = `rotateX(${event.gamma}deg) rotateY(0deg) rotateZ(${event.alpha}deg)`;
             }, true);
         } else {
             document.getElementById("y").textContent="error";
