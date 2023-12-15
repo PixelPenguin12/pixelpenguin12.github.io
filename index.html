@@ -6,15 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="alpha">0.00</h1>
-    <h1 id="beta">0.00</h1>
-    <h1 id="gamma">0.00</h1>
+    <h1 id="y">0.00</h1>
+    <h1 id="x">0.00</h1>
     <script>
         if (window.DeviceOrientationEvent) {
             window.addEventListener("deviceorientation", function () {
-                document.getElementById("alpha").textContent=event.alpha;
-                document.getElementById("beta").textContent=event.beta;
-                document.getElementById("gamma").textContent=event.gamma;
+                document.getElementById("y").textContent=event.alpha;
+                document.getElementById("x").textContent=event.gamma;
             }, true);
         } else {
             document.getElementById("alpha").textContent="error";
