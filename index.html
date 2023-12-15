@@ -44,10 +44,10 @@
     <h1 id="y">0.00</h1>
     <h1 id="x">0.00</h1>
     <script>
+        const cube = document.getElementById('rotatingCube');
         if (window.DeviceOrientationEvent) {
             window.addEventListener("deviceorientation", function () {
-                document.getElementById("y").textContent=event.alpha;
-                document.getElementById("x").textContent=event.gamma;
+                cube.style.transform = `rotateX(${event.alpha}deg) rotateY(0deg) rotateZ(${event.gamma}deg)`;
             }, true);
         } else {
             document.getElementById("y").textContent="error";
